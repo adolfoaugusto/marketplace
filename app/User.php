@@ -45,4 +45,9 @@ class User extends Authenticatable
 
         return "{$this->name} {$this->last_name}";
     }
+
+    public function store()
+    {
+        return $this->hasOne(Store::class);
+    }
 }

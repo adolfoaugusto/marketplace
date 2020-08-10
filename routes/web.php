@@ -27,3 +27,19 @@ Route::put('/profile', 'ProfileController@update')->name('profile.update');
 Route::get('/about', function () {
     return view('about');
 })->name('about');
+
+
+Route::get('/model', function () {
+    // $user = \App\User::find(40);
+    // $user = $user->update([
+    //     'name'=> 'teste atualizando',
+    // ]);
+
+    // $user->name = 'usuario teste';
+    // $user->last_name = 'tete';
+    // $user->email = 'email@mail.com';
+    // $user->password = bcrypt('12345678');
+    // return $user->save();
+    // dd($user);
+    return \App\User::all();
+});
